@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "artist-tracking-backend": {
+      "main": "src/artist-tracking-backend/main.mo",
+      "type": "motoko"
+    },
+    "artist-tracking-frontend": {
+      "dependencies": [
+        "artist-tracking-backend"
+      ],
+      "source": [
+        "src/artist-tracking-frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "artist-tracking-frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
