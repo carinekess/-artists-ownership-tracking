@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  color: white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); /* Left side shadow */
+  padding: 20px;
+
+}
+.input {
+  width: 520px;
+  height: 40px;
+  border-color: rgb(184, 184, 252);
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+.content {
+  display: flex;
+  flex: 1; /* Allows this section to grow */
+  margin-top: 20px;
+}
+.icon-container {
+  display: flex; /* Use flexbox for alignment */
+  left: 20pc;
+  flex-direction: column; /* Stack icons vertically */
+  padding: 40px; /* Add padding around the container */
+  margin-right: 20px; 
+
+  gap: 20px;
+}
+a{
+  
+  font-size: 15px;
+  margin-right: 20px; 
+  text-decoration-line: none;
+  color:black;
+}
+.icon {
+  margin-left: 10px ; /* Add vertical margin to space out the icons */
+  font-size: 5px; /* Adjust icon size */
+  color: #333; /* Change icon color */
+}
+a {
+ 
+  font-size: 10px; /* Sets font size */
+  color: rgb(100, 18, 207); /* Default text color */
+  padding: 2px; /* Adds some padding */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+
+}
+a:hover{
+  color: black;
+
+}
+.box{
+  margin-top: 10px;
+  margin-left: 40px;
+  width: 700px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.95); /* Left side shadow */
+}
+.dashbord{
+  margin-left: 40px;
+  margin-top: 10px;
+}
+img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.contain {
+  display: flex;
+  flex: 1; /* Allows this section to grow */
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.image {
+  margin-top: 10px;
+  margin-left: 40px;
+  width: 600px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.95); /* Left side shadow */
+}
+.left {
+  flex: 0 0 16%; /* Fixed 30% width */
+  background-color: rgb(255, 255, 255);
+  
+  padding: 20px;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5); /* Left side shadow */
+  position: relative; /* Required for positioning */
+  
+}
+.containers {
+  display: flex;
+  flex: 1; /* Allows this section to grow */
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.right {
+  flex: 0 0 84%; /* Fixed 70% width */
+  background-color:  rgb(234, 237, 253);
+  padding: 20px;
+}
+.python{
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 700px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: white;
+
+}
+.comment {
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 600px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: white;
+  
+}
+.comment h3{
+  color: blue;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.footer {
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column; /* Stack the divs on smaller screens */
+  }
+
+  
+  .left, .right {
+    flex: 1 0 auto; /* Allow both divs to take full width */
+    margin-bottom: 10px; /* Add some spacing between them */
+  }
+}
