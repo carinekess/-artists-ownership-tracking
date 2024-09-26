@@ -1,10 +1,10 @@
 {
-  "name": "artist-tracking-frontend",
+  "name": "artist_tracking_frontend",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "setup": "npm i && dfx canister create artist-tracking-backend && dfx generate artist-tracking-backend && dfx deploy",
+    "setup": "npm i && dfx canister create artist_tracking_backend && dfx generate artist_tracking_backend && dfx deploy",
     "start": "vite --port 3000",
     "prebuild": "dfx generate",
     "build": "tsc && vite build",

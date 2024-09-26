@@ -1,26 +1,17 @@
 {
   "canisters": {
-    "artist-tracking-backend": {
-      "main": "src/artist-tracking-backend/main.mo",
-      "type": "motoko"
+    "artist_tracking_backend": {
+      "type": "motoko",
+      "main": "src/artist_tracking_backend/main.mo"
     },
-    "artist-tracking-frontend": {
-      "dependencies": [
-        "artist-tracking-backend"
-      ],
-      "source": [
-        "src/artist-tracking-frontend/dist"
-      ],
+    "artist_tracking_frontend": {
       "type": "assets",
-      "workspace": "artist-tracking-frontend"
+      "source": [
+        "src/artist_tracking_frontend"
+      ],
+      "dependencies": [
+        "artist_tracking_backend"
+      ]
     }
-  },
-  "defaults": {
-    "build": {
-      "args": "",
-      "packtool": ""
-    }
-  },
-  "output_env_file": ".env",
-  "version": 1
+  }
 }
