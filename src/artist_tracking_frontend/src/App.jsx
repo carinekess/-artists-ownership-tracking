@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Actor, HttpAgent } from "@dfinity/agent";
-import { artist_tracking_backend } from 'declarations/artist_tracking_backend'; // Import the IDL
+import { idlFactory } from 'declarations/artist_tracking_backend'; // Import the IDL
 import './index.scss';
 
 const App = () => {
@@ -17,13 +17,28 @@ const App = () => {
   const [error, setError] = useState(''); // State to handle errors
   const [success, setSuccess] = useState(''); // State to handle success messages
 
+  const be = "http://127.0.0.1:4943"
+  // const CanisterId = process.env.REACT_APP_CANISTER_ID_ARTIST_TRACKING_BACKEND;
+  const backendCanisterId = process.env.CANISTER_ID_ARTIST_TRACKING_BACKEND;
+
+  console.log(backendCanisterId)
+
+  if (!backendCanisterId) {
+    console.error("Canister ID is undefined. Check your .env file.");
+  }
+
   useEffect(() => {
     const init = async () => {
       try {
-        const agent = new HttpAgent({ host: "http://localhost:8000" });
-        const artistTrackingBackend = Actor.createActor(artist_tracking_backend_idl, {
+        const agent = new HttpAgent({ host: be });
+
+        if (process.env.NODE_ENV === 'development') {
+          await agent.fetchRootKey();
+        }
+
+        const artistTrackingBackend = Actor.createActor(idlFactory, {
           agent,
-          canisterId: process.env.CANISTER_ID_ARTIST_TRACKING_BACKEND // Replace with your actual canister ID
+          canisterId: backendCanisterId // Replace with your actual canister ID
         });
 
         const [artistData, projectData] = await Promise.all([
@@ -44,10 +59,15 @@ const App = () => {
 
   const addArtist = async () => {
     try {
-      const agent = new HttpAgent({ host: "http://localhost:8000" });
-      const artistTrackingBackend = Actor.createActor(artist_tracking_backend_idl, {
+      const agent = new HttpAgent({ host: be });
+
+      if (process.env.NODE_ENV === 'development') {
+        await agent.fetchRootKey();
+      }
+
+      const artistTrackingBackend = Actor.createActor(idlFactory, {
         agent,
-        canisterId: 'YOUR_BACKEND_CANISTER_ID'
+        canisterId: backendCanisterId
       });
 
       await artistTrackingBackend.addArtist(artistId, name, contactInfo);
@@ -65,10 +85,15 @@ const App = () => {
 
   const addProject = async () => {
     try {
-      const agent = new HttpAgent({ host: "http://localhost:8000" });
-      const artistTrackingBackend = Actor.createActor(artist_tracking_backend_idl, {
+      const agent = new HttpAgent({ host: be });
+
+      if (process.env.NODE_ENV === 'development') {
+        await agent.fetchRootKey();
+      }
+
+      const artistTrackingBackend = Actor.createActor(idlFactory, {
         agent,
-        canisterId: 'YOUR_BACKEND_CANISTER_ID'
+        canisterId: backendCanisterId
       });
 
       await artistTrackingBackend.addProject(projectId, title, description);
@@ -86,10 +111,15 @@ const App = () => {
 
   const assignProject = async () => {
     try {
-      const agent = new HttpAgent({ host: "http://localhost:8000" });
-      const artistTrackingBackend = Actor.createActor(artist_tracking_backend_idl, {
+      const agent = new HttpAgent({ host: be });
+
+      if (process.env.NODE_ENV === 'development') {
+        await agent.fetchRootKey();
+      }
+
+      const artistTrackingBackend = Actor.createActor(idlFactory, {
         agent,
-        canisterId: 'YOUR_BACKEND_CANISTER_ID'
+        canisterId: backendCanisterId
       });
 
       await artistTrackingBackend.assignProjectToArtist(assignArtistId, assignProjectId);
