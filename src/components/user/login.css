@@ -142,39 +142,71 @@ img {
   margin-left: 35px;
   margin-top: 10px;
 }
-.python {
-  margin-top: 10px;
-  width: 700px;
-  border-radius: 10px;
-  background-color: white;
+/* User register styles */
+.users-registers {
+
+display: flex;
+background-color: #fff;
+margin-top: 19px;
+margin-left: 300px;
+border-radius: 20px;
+box-shadow: 0 0 10px rgb(0, 0, 0,0.98);
+height: 60%;
+flex-direction: column; /* Stack inputs vertically */
+width: 50%; /* Full width for the registration form */
 }
-.python img {
-  width: 100%; /* Make it responsive */
-  height: 285px; /* Maintain aspect ratio */
-  border-radius: 10px; /* Optional styling */
+.users-registers h3 {
+text-align: center;
+margin-top: 25px;
+font-size: 20px;
+color: blue;
 }
 
-.comment {
-  margin-top: 10px;
-  margin-left: 30px;
-  width: 600px;
-  height: 280px;
-  border-radius: 10px;
-  background-color: white;
+/* Input field styles */
+.users-registers input[type="text"],
+.users-registers input[type="email"] {
+padding: 10px;
+border-radius: 10px;
+border: 1px solid #ccc;
+margin-left: 40px;
+width: 90%; /* Full width for inputs */
+box-sizing: border-box; /* Include padding and border in width */
+margin-top: 25px; /* Space between inputs */
 }
 
-.comment h3 {
-  color: blue;
-  text-align: center;
-  margin-top: 20px;
-  font-size: 30px;
+/* Button styles */
+.users-registers button {
+background-color: blue; /* Button background color */
+color: white; /* Text color */
+padding: 10px;
+border: none;
+margin-left: 40px;
+border-radius: 10px;
+width: 90%;
+cursor: pointer; /* Pointer on hover */
+margin-top: 10px; /* Space above the button */
+font-size: 16px; /* Font size */
 }
-.comment h4 {
+.project-links {
+display: flex;
+margin-left: 300px;
+}
+.project-link a {
+  width: 200px;
+  height: 40px;
+  padding: 10px;
+  color: #fff;
+  background-color: blue;
+  gap: 60px;
+  margin-right: 100px;
+  outline: auto;
   text-align: center;
-  left: 20px;
-  margin-top: 20px;
-  font-size: 15px;
-  text-align: center;
+  text-decoration: none;
+}
+
+/* Button hover effect */
+.user-register button:hover {
+background-color: darkblue; /* Darken the button on hover */
 }
 
 .right {

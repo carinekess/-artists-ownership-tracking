@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    text-align: center;
+    height: 90px;
+    background-color: #fff; /* Changed for visibility */
+    padding: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  }
+  .head {
+    display: flex;
+    margin-right: 0px;
+  }
+  .log {
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+  }
+  .head i {
+    margin-left: 500px;
+    margin-top: 5px;
+    font-size: 40px;
+    color: blue;
+  }
+  
+  .header input {
+    margin-left: 400px;
+  }
+  .header img {
+    margin-left: 100px;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .input {
+    width: 520px;
+    height: 40px;
+    border: 1px solid rgb(184, 184, 252);
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .content {
+    display: flex;
+    flex: 1;
+    margin-top: 5px;
+  }
+  
+  .icon-container {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    margin-right: 20px;
+    gap: 20px;
+  }
+  .icon-container logout {
+    margin-top: 40px;
+  }
+  
+  .icon-link {
+    margin-top: 20px;
+    width: 100px;
+    font-size: 15px;
+    color: rgb(100, 18, 207);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+  }
+  
+  .icon-link:hover {
+    color: rgb(255, 255, 255);
+    width: 150px;
+    height: 35px;
+    background-color: rgb(4, 37, 224);
+  }
+  
+  .icon {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 20px; /* Increase icon size */
+  }
+  
+  .box {
+    margin-top: 10px;
+    width: 700px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .dashboard {
+    margin-left: 40px;
+    margin-top: 10px;
+  }
+  
+  img {
+    width: 100%;
+    height: 300px;
+  
+    border-radius: 5px;
+  }
+  
+  .contain {
+    display: flex;
+    margin-left: 35px;
+    margin-top: 10px;
+  }
+  
+  .image {
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 600px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .left {
+    flex: 0 0 16%;
+    background-color: #fff; /* For visibility */
+    padding: 20px;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
+  }
+  .containers {
+    display: flex;
+    margin-left: 35px;
+    margin-top: 10px;
+  }
+/* User register styles */
+.users-register {
+
+  display: flex;
+  background-color: #fff;
+  margin-top: 20px;
+  margin-left: 300px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgb(0, 0, 0,0.98);
+  height: 90%;
+  flex-direction: column; /* Stack inputs vertically */
+  width: 50%; /* Full width for the registration form */
+}
+.users-register h3 {
+text-align: center;
+margin-top: 25px;
+font-size: 30px;
+color: blue;
+}
+
+/* Input field styles */
+.users-register input[type="text"],
+.users-register input[type="email"] {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-left: 40px;
+  width: 90%; /* Full width for inputs */
+  box-sizing: border-box; /* Include padding and border in width */
+  margin-top: 25px; /* Space between inputs */
+}
+
+/* Button styles */
+.users-register button {
+  background-color: blue; /* Button background color */
+  color: white; /* Text color */
+  padding: 10px;
+  border: none;
+  margin-left: 40px;
+  border-radius: 10px;
+  width: 90%;
+  cursor: pointer; /* Pointer on hover */
+  margin-top: 10px; /* Space above the button */
+  font-size: 16px; /* Font size */
+}
+.project-link {
+display: flex;
+margin-left: 400px;
+}
+.project-link a {
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+    color: #fff;
+    background-color: blue;
+    gap: 60px;
+    margin-right: 100px;
+    outline: auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Button hover effect */
+.user-register button:hover {
+  background-color: darkblue; /* Darken the button on hover */
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+td,th{
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+th{
+  background-color: #fff;
+}
+
+  .right {
+    flex: 0 0 84%;
+    background-color: rgb(234, 237, 253);
+    padding: 20px;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column; /* Stack on smaller screens */
+    }
+  
+    .left,
+    .right {
+      flex: 1 0 auto; /* Allow full width */
+      margin-bottom: 10px;
+    }
+  }
+  

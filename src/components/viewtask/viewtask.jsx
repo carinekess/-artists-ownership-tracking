@@ -1,9 +1,12 @@
 import React from "react";
-import "./App.css";
-import img1 from "./images/software.jpg";
+import "./viewtask.css";
+import img1 from "./images/software.jpg"; // Adjust this path based on your structure
 import pythonImage from "./images/pro.png";
+import img2 from "./images/red.png";
+import img3 from "./images/blue.png";
 
-const App = () => {
+
+const  Viewtask= () => {
   return (
     <div className="container">
     <header className="header">
@@ -15,23 +18,27 @@ const App = () => {
           placeholder="Search or type here"
         />
         <i className="fa-solid fa-pen "></i>
-         <img src={img1} alt="Software" />
+        <img src={img1} alt="Software" />
+         
       </div>
     </header>
       <div className="content">
       <aside className="left">
           <div className="icon-container">
-            <a href="/" className="icon-link">
+            <a href="/manager" className="icon-link">
               <i className="fa-solid fa-house icon"></i> Home
             </a>
             <a href="/user" className="icon-link">
-              <i className="fa-solid fa-user icon"></i> User
+              <i className="fa-solid fa-user icon"></i> Teams
             </a>
             <a href="/report" className="icon-link">
               <i className="fa-regular fa-newspaper icon"></i> Report
             </a>
-            <a href="/project" className="icon-link">
+            <a href="/prograss" className="icon-link">
               <i className="fa-regular fa-address-card icon"></i> Project
+            </a>
+            <a href="/task" className="icon-link">
+              <i className="fa-brands fa-stack-exchange"></i> &nbsp;  &nbsp;Task
             </a>
             <a href="/notice" className="icon-link">
               <i className="fa-brands fa-square-snapchat icon"></i> Notification
@@ -39,8 +46,8 @@ const App = () => {
             <a href="/message" className="icon-link">
               <i className="fa-brands fa-facebook-messenger icon"></i> Messenger
             </a>
-            <a href="/resource" className="icon-link">
-              <i className="fa-solid fa-layer-group"></i> Resource
+            <a href="/resources" className="icon-link">
+              <i className="fa-solid fa-layer-group"></i>  &nbsp; &nbsp;Resource
             </a>
            
           </div>
@@ -54,29 +61,25 @@ const App = () => {
           </div>
         </aside>
         <main className="right">
-          <h2 className="dashboard">Dashboard</h2>
-          <div className="contain">
-            <div className="box"></div>
-            <div className="image">
-              <img src={img1} alt="Software" />
+        <div className="project-link">
+                <a href="/task"> Add Task</a>
             </div>
-          </div>
-          <div className="containers">
-            <div className="python">
-              <img src={pythonImage} alt="Python" />
-            </div>
-            <div className="comment">
-              <h3>Comment</h3>
-              <h4>
-                This project serves as a comprehensive dashboard application
-                designed to streamline user interactions.
-              </h4>
-            </div>
-          </div>
+            <table>
+            <tr>
+              <th>ProjectName</th>
+              <th>TaskName</th>
+              <th>Subtask</th>
+              <th>Assigned TO</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Action</th>
+
+            </tr>
+          </table>
         </main>
       </div>
     </div>
   );
 };
 
-export default App;
+export default Viewtask;
