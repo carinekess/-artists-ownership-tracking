@@ -1,0 +1,17 @@
+{
+  "canisters": {
+    "artist_tracking_backend": {
+      "type": "motoko",
+      "main": "src/artist_tracking_backend/main.mo"
+    },
+    "artist_tracking_frontend": {
+      "type": "assets",
+      "source": [
+        "src/artist_tracking_frontend"
+      ],
+      "dependencies": [
+        "artist_tracking_backend"
+      ]
+    }
+  }
+}

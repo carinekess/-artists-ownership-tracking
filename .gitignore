@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -22,3 +23,30 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+=======
+# Various IDEs and Editors
+.vscode/
+.idea/
+**/*~
+
+# Mac OSX temporary files
+.DS_Store
+**/.DS_Store
+
+# dfx temporary files
+.dfx/
+
+# generated files
+**/declarations/
+
+# rust
+target/
+
+# frontend code
+node_modules/
+dist/
+.svelte-kit/
+
+# environment variables
+.env
+>>>>>>> 9c750dd5a7ebc0176fc25d632ee9dd805b60a07a
